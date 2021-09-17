@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React Practice</title>
+    <script
+      src="https://unpkg.com/react@17/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  </head>
+  <body>
+    <h1>VJS</h1>
+    <div>
+      <button id="vjs-button">
+        Click Me(VJS) <span>hello pure text</span>
+      </button>
+    </div>
+
+    <!-- 컴포넌트를 탑재할 영역 -->
+    <h1>React</h1>
+    <div id="react-component"></div>
+    <script>
+      window.addEventListener("load", () => {
+        let btn = document.querySelector("#vjs-button");
+        btn.addEventListener("click", (event) => {
+          alert(event.target.innerHTML);
+        });
+      });
+    </script>
+    <script type="text/babel" src="./js/index.js"></script>
+  </body>
+</html>
