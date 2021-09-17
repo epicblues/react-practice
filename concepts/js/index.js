@@ -26,6 +26,7 @@ function HelloButton(props) {
     alert(e.target.innerText);
     e.target.innerText = "this button is clicked!";
   };
+
   return (
     <div>
       <button onClick={click}>
@@ -53,25 +54,24 @@ class HelloButtonClass extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <button onClick={(e) => this.click(e)}>{this.props.children}</button>
+      <button
+        onClick={(e) => this.click(e)}
+        onFocus={(e) => {
+          console.log(this);
+          e.target.style.background = "grey";
+        }}
+      >
+        {this.props.children}
+      </button>
     );
   }
 }
 
-const KmsWelcome = new Welcome({
-  message: "hello world",
-  children: "이것은 차일드 입니다.",
-}).render();
+// 이것을 통해서는 render()가 호출되었더라도 mount가 된 것은 아니다. DOM을 통해 등록해야 할 듯?
 
 ReactDOM.render(
   <div>
-    <HelloButtonClass message={"React Function Button"}>
-      im HelloButton's Children
-    </HelloButtonClass>
-    {new Welcome({
-      message: "hello world",
-      children: <p>이것은 children 입니다</p>,
-    }).render()}
+    <NewLifeCycle message="hello" color="red" />
   </div>,
   document.getElementById("react-component")
 );

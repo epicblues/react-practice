@@ -20,7 +20,29 @@ class Welcome extends React.Component {
     
   }
 
+  componentDidMount() {
+    console.log("LifeCycle : componentDidMount 호출");
+  }
+
+  componentWillMount() {
+    console.log("LifeCycle : componentWillmount 호출")
+  }
+
+  // Old Updating 라이프 사이클 : 
+  // componentWillReceiveProps -> componentWillUpdate -> componentDidUpdate
+  componentWillReceiveProps() {
+    console.log("LifeCycle : componentWillReceiveProps");
+  }
+
+  componentWillUpdate() {
+    console.log("LifeCycle : componentWillUPdate");
+  }
+
+  componentDidUpdate() {
+    console.log("LifeCycle : componentDidUpdate");
+  }
   render() {
+    console.log("LifeCycle : Render");
     // JSX를 리턴한다
     console.log("render props : ", this.props);
 
@@ -40,5 +62,12 @@ class Welcome extends React.Component {
 }
 
 
+function HelloButtonHook(props) {
+  function getDerivedStateFromProps() {
+    console.log('hello world');
+  }
+
+  return <h1>baka</h1>
+}
 
 
