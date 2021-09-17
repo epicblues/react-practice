@@ -65,12 +65,13 @@ const KmsWelcome = new Welcome({
 
 ReactDOM.render(
   <div>
-    <HelloButtonClass message="React Function Button">
+    <HelloButtonClass message={"React Function Button"}>
       im HelloButton's Children
     </HelloButtonClass>
-    <Welcome message="Custom Component">
-      이것은 사용자 정의 컴포넌트입니다.
-    </Welcome>
+    {new Welcome({
+      message: "hello world",
+      children: <p>이것은 children 입니다</p>,
+    }).render()}
   </div>,
   document.getElementById("react-component")
 );
