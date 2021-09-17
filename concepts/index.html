@@ -34,6 +34,10 @@
         });
       });
     </script>
+
+    <!-- pure JavaScript가 아님을 브라우저에게 선언. babel이 먼저 transpile한다. -->
+    <script type="text/babel" src="./js/components/welcome.jsx"></script>
+    <!-- 미리 로드했으므로 아래 index.js에서 import를 할 필요가 없다.-->
     <script type="text/babel" src="./js/index.js"></script>
   </body>
 </html>

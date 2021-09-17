@@ -58,9 +58,19 @@ class HelloButtonClass extends React.Component {
   }
 }
 
+const KmsWelcome = new Welcome({
+  message: "hello world",
+  children: "이것은 차일드 입니다.",
+}).render();
+
 ReactDOM.render(
-  <HelloButtonClass message="React Function Button">
-    im HelloButton's Children
-  </HelloButtonClass>,
+  <div>
+    <HelloButtonClass message="React Function Button">
+      im HelloButton's Children
+    </HelloButtonClass>
+    <Welcome message="Custom Component">
+      이것은 사용자 정의 컴포넌트입니다.
+    </Welcome>
+  </div>,
   document.getElementById("react-component")
 );
