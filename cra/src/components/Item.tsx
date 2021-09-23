@@ -1,9 +1,10 @@
 
 
-type propObj = {
+interface propObj {
   item: string,
   checked: boolean,
 }
+
 
 
 
