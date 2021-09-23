@@ -10,7 +10,7 @@ interface props {
   },
   prop_num: number,
   prop_func: Function,
-  children?: any
+  children: React.ReactElement
 
 }
 
