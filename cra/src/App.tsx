@@ -4,7 +4,7 @@ import React, { useState } from 'react';
 
 // 다수의 컴포넌트 렌더링
 
-const items = [
+const items: { id: number, name: string, checked: boolean }[] = [
   {
     id: 1,
     name: "notebook",
@@ -39,8 +39,7 @@ function App() {
   console.log(stateItems == items);
   return (
     <div className="App">
-      {stateItems.map(renderItem
-      )}
+      {stateItems.map(renderItem)}
 
     </div>
   );
