@@ -24,7 +24,7 @@ class NewLifeCycle extends React.Component {
     return prevState;
   }
 
-  shouldComponentUpdate(nextProps, nextState) {
+  shouldComponentUpdate(nextProps, nextState) {bj
     // component를 다시 rendering 해야 할 지 결정하는 단계
     console.log("Should Component Update : ",nextProps, nextState);
     return false; // return  값이 true면 다시 렌더링
