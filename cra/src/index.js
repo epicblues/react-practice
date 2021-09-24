@@ -4,7 +4,8 @@ import "./index.css";
 // import App from "./App.props.tsx";
 // import App from "./App.function";
 // import App from "./App.ref";
-import App from "./App.context";
+// import App from "./App.context";
+import App from "./App.routing";
 import reportWebVitals from "./reportWebVitals";
 
 ReactDOM.render(
