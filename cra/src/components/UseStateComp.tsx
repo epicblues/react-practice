@@ -6,13 +6,6 @@ const UseStateComp: FunctionComponent<{ contents: string }> = (props) => {
   // count 초기값은 0 getter
   // setCount는 setter
 
-  useEffect(() => {
-    console.log("imperative activated"); // componentDidMount, componentDidUpdate
-    return () => {
-      console.log("cleanup Activated"); // componentWillUnmount, componentWillUpdate
-    };
-  }, []);
-
   return (
     <div>
       <h2>{contents}</h2>
